@@ -1,0 +1,249 @@
+/* Global */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f3f4f6;
+}
+
+/* Layout */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 220px;
+  background: #547792;
+  color: #f9fafb;
+  padding: 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+/* Main area */
+
+.main {
+  flex: 1;
+  background: #94B4C1;
+  color: #111827;
+  padding: 20px 24px;
+}
+
+/* Top bar */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.badge {
+  background: #3b82f6;
+  color: #f9fafb;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+/* Content */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+
+.cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 160px;
+  background: #EBF4DD;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #EBF4DD;
+  margin: 0 0 6px;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Panels */
+
+.panel {
+  background: #EBF4DD;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+/* Form */
+
+.user-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.user-form input::placeholder {
+  color: #9ca3af;
+}
+
+.user-form button {
+  background: #16a34a;
+  color: #f9fafb;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.user-form button[type="button"] {
+  background: #6b7280;
+}
+
+/* Table */
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+  background: #ffffff;
+}
+
+.users-table th,
+.users-table td {
+  border: 1px solid #9faab3;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.users-table th {
+  background: #8b959d
+  color: #374151;
+  text-align: left;
+}
+
+.users-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.users-table tr:hover {
+  background: #e5f0ff;
+}
+
+.user-photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+/* Table buttons */
+
+.users-table button {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.users-table button:first-child {
+  background: #3b82f6;
+  color: #c7d5e0
+}
+
+.users-table .delete-btn {
+  background: #ef4444;
+  color: white;
+  margin-left: 6px;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 10px;
+  color: #6b7280;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main {
+    padding: 12px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
